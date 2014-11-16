@@ -1,15 +1,15 @@
 <div id="searchView">
-	<div id="searchInput">
-		<p>Enter a song title: </p>
-		<input type="text" name="searchTerm" placeholder="Enter a song..." autofocus required/>
+	<form id="searchInput" ng-submit="songSearch()">
+		<label for="searchTerm" class="container">Search for a song:</label>
+		<input type="text" ng-model="searchTerm" name="searchTerm" autofocus required/>
 		<input type="submit" name="submit">
-	</div>	
+	</form>	
 	<div id="searchResults">
 		<div ng-repeat="result in results">
 			<div class="container">
 				<a href="#/details/{{ result.id }}" class="name" ng-bind="result.name"></a>
-				<div class="artist" ng-bind="result.artist"></div>
-				<div class="album" ng-bind="result.album"></div>
+				<div class="artist" ng-bind="result.artists[0].name"></div>
+				<div class="album" ng-bind="result.album.name"></div>
 			</div>
 		</div>
 	</div>

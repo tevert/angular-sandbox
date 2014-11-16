@@ -1,1 +1,11 @@
-<p>ID: {{id}}</p>
+<div id="details">
+	<div class="container">
+		<h1>Song Details: <span ng-bind="song.title"></span></h1>
+	</div>
+	<div class="data" ng-repeat="field in song.data">
+		<div class="container">
+			<div class="key" ng-bind="field.key"></div>
+			<div class="value" ng-bind="field.value"></div>
+		</div>
+	</div>
+</div>

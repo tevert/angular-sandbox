@@ -9,20 +9,12 @@ angular.module('myApp.search', ['ngRoute'])
   });
 }])
 
-.controller('SearchCtrl', [ '$scope',
-function($scope) {
-	$scope.results = [
-		{
-			id: "asd",
-			name: "Running Down a Dream hello world hello world hello world hello world hello world",
-			artist: "Tom Petty",
-			album: "Full Moon Fever"
-		},
-		{
-			id: "lkj",
-			name: "Blue Suede Shoes",
-			artist: "Elvis Presley",
-			album: "Elvis Presley"
-		}
-	];
+.controller('SearchCtrl', [ '$scope', 'Spotify',
+function($scope, Spotify) {
+	
+	$scope.songSearch = function() {
+		Spotify.search($scope.searchTerm).then(function(data){
+			$scope.results = data.data.tracks.items;
+		});
+	}
 }]);
