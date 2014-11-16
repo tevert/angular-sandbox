@@ -1,0 +1,20 @@
+/* app css stylesheet */
+
+#searchResults .name,
+#searchResults .artist,
+#searchResults .album {
+	width: 30%;
+	float: left;
+	text-overflow: 
+}
+
+#searchResults .name {
+	font-weight: bold;
+}
+
+
+.container:after {
+  content:"";
+  display:table;
+  clear:both;
+}
