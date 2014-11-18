@@ -1,11 +1,12 @@
 <div id="details">
 	<div class="container">
 		<h1>Song Details: <span ng-bind="song.title"></span></h1>
-	</div>
-	<div class="data" ng-repeat="field in song.data">
-		<div class="container">
-			<div class="key" ng-bind="field.key"></div>
-			<div class="value" ng-bind="field.value"></div>
-		</div>
+		<p>
+			<h3>Listen now!</h3>
+			<div ng-if="songDataLoaded">
+				<div json-object data="{{song}}"></div>
+			</div>
+			<iframe ng-src="{{spotifyEmbed}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+		</p>
 	</div>
 </div>

@@ -6,7 +6,8 @@ angular.module('myApp', [
   'myApp.search',
   'myApp.details',
   'myApp.spotify',
-  'myApp.echonest'
+  'myApp.echonest',
+  'myApp.JSONObject'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/search'});
