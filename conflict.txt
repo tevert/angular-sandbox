@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 world 
+=======
+hello 
+>>>>>>> 40f160d6d9199afba80995e7eab514a4cdb8d42a
